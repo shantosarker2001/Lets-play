@@ -20,6 +20,8 @@ const Main = () => {
         const newCart = [...cart, game]
         setCart(newCart)
     }
+    const setValue = () => {
+    }
     return (
         <div className='main'>
             <div className="game-container">
