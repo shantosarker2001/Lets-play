@@ -1,4 +1,23 @@
-.time-table {
-    position: sticky;
-    top: 0px;
+.time-table {}
+
+.personal-info {
+    display: flex;
+    background-color: lightgray;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 30px;
+    margin-top: 30px;
+    border-radius: 20px;
+}
+
+.info {
+    background-color: white;
+
+    border-radius: 20px;
+    display: block;
+}
+
+.info h5,
+p {
+    margin: 0 0px;
 }

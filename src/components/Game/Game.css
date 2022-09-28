@@ -32,6 +32,7 @@
     background-color: gray;
     border-radius: 0px 0px 14px 14px;
     transition: 0.5s all ease;
+    padding: 20px;
 }
 
 .btn-cart p {

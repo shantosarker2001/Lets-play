@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import Break from '../Break/Break';
+import BreakTime from '../BreakTime/BreakTime';
+import Excersise from '../Excersise/Excersise';
 import Game from '../Game/Game';
 import TimeTable from '../TimeTable/TimeTable';
+import User from '../User/User'
 import './Main.css'
 const Main = () => {
     const [games, setGames] = useState([])
@@ -27,7 +31,13 @@ const Main = () => {
 
             </div>
             <div className="timetable">
+                <User></User>
                 <TimeTable></TimeTable>
+                <Break></Break>
+                <h3>Excersise Details:</h3>
+                <Excersise></Excersise>
+                <BreakTime></BreakTime>
+                <button className='complete'>Excersise Done</button>
             </div>
         </div >
     );

@@ -1,0 +1,25 @@
+.break {
+    display: flex;
+    padding: 0px 5px;
+    align-items: center;
+    background-color: lightgray;
+    padding: 5px 5px;
+    border-radius: 10px;
+    margin: 20px 5px;
+    justify-content: space-between;
+}
+
+.complete {
+    width: 100%;
+    padding: 10px 5px;
+    font-size: 17px;
+    background-color: lightgray;
+    border-radius: 15px;
+    border: none;
+    transition: 0.5s all ease;
+}
+
+.complete:hover {
+    background-color: white;
+    color: black;
+}

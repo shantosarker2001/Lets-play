@@ -1,0 +1,12 @@
+.personal-info button {
+    padding: 5px;
+    border-radius: 15px;
+    background-color: lightgray;
+    margin-bottom: 20px;
+}
+
+.personal-info button:hover {
+    background-color: white;
+}
+
+.personal-info {}
