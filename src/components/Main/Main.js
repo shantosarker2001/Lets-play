@@ -14,6 +14,12 @@ const Main = () => {
             .then(res => res.json())
             .then(data => setGames(data))
     }, [])
+
+    const [cart, setCart] = useState([])
+    const addToCartHandler = (game) => {
+        const newCart = [...cart, game]
+        setCart(newCart)
+    }
     return (
         <div className='main'>
             <div className="game-container">
@@ -23,7 +29,11 @@ const Main = () => {
                     <h3>Select your game</h3>
                     <div className='container'>
                         {
-                            games.map(game => <Game game={game}></Game>)
+                            games.map(game => <Game
+                                game={game}
+                                key={game.key}
+                                addToCartHandler={addToCartHandler}
+                            ></Game>)
                         }
                     </div>
 
@@ -35,7 +45,7 @@ const Main = () => {
                 <TimeTable></TimeTable>
                 <Break></Break>
                 <h3>Excersise Details:</h3>
-                <Excersise></Excersise>
+                <Excersise cart={cart}></Excersise>
                 <BreakTime></BreakTime>
                 <button className='complete'>Excersise Done</button>
             </div>
