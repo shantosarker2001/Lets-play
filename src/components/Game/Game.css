@@ -1,0 +1,44 @@
+.game {
+    background-color: white;
+    border-radius: 15px;
+    border: 1px solid black;
+    position: relative;
+}
+
+.game img {
+    margin: 10px;
+    width: 280px;
+    height: 150px;
+}
+
+.info {
+    padding: 8px;
+    margin-bottom: 30px;
+}
+
+.info h1 {
+    margin: 0px;
+}
+
+.info p {
+    margin-bottom: 30px;
+}
+
+.btn-cart {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border: none;
+    background-color: gray;
+    border-radius: 0px 0px 14px 14px;
+    transition: 0.5s all ease;
+}
+
+.btn-cart p {
+    font-size: 17px;
+}
+
+.btn-cart:hover {
+    background-color: lightgray;
+    color: black;
+}

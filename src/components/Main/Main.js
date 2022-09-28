@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Game from '../Game/Game';
+import TimeTable from '../TimeTable/TimeTable';
 import './Main.css'
 const Main = () => {
     const [games, setGames] = useState([])
@@ -13,22 +14,22 @@ const Main = () => {
         <div className='main'>
             <div className="game-container">
                 <div>
-                    <img src=""></img>
-                    <h1>Lets-Play</h1>
+                    {/* <img src=""></img> */}
+                    <h1>Lets-Play:{games.length}</h1>
                     <h3>Select your game</h3>
-                    {
-                        games.map(game => <Game
-                            game={game}
-                            key={game.id}
-                        ></Game>)
-                    }
+                    <div className='container'>
+                        {
+                            games.map(game => <Game game={game}></Game>)
+                        }
+                    </div>
+
                 </div>
 
             </div>
             <div className="timetable">
-                <h1>Time-Table</h1>
+                <TimeTable></TimeTable>
             </div>
-        </div>
+        </div >
     );
 };
 
