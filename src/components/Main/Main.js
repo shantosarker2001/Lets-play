@@ -22,12 +22,22 @@ const Main = () => {
     }
 
     const times = ['10s', '20s', '30s', '40s']
-    const [timecart, setTimecart] = useState([])
-    const setTime = (time) => {
-        const newtimeCart = [...timecart, time]
-        setTimecart(newtimeCart)
-        // console.log(newtimeCart)
+    const [singleTime, setSingleTime] = useState([])
+    let perTime;
+    const setTime = (somoy) => {
+        const newTime = [...singleTime, somoy]
+        setSingleTime(newTime)
+        // console.log("clicked", somoy)
+        // console.log(newTime)
+
+        for (const time of newTime) {
+            perTime = time
+        }
+        console.log(perTime)
+
     }
+    // console.log(singleTime)
+    // const [timecart, setTimecart] = useState([])
     return (
         <div className='main'>
             <div className="game-container">
@@ -62,7 +72,8 @@ const Main = () => {
                 {/* <Break></Break> */}
                 <h3>Excersise Details:</h3>
                 <Excersise cart={cart}></Excersise>
-                <BreakTime></BreakTime>
+
+                <BreakTime somoy={perTime}></BreakTime>
                 <button className='complete'>Excersise Done</button>
             </div>
         </div >

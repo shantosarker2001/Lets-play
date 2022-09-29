@@ -3,11 +3,13 @@
     border-radius: 15px;
     border: 1px solid black;
     position: relative;
+
 }
 
 .game img {
     margin: 10px;
-    width: 280px;
+
+    width: 250px;
     height: 150px;
 }
 
@@ -42,4 +44,28 @@
 .btn-cart:hover {
     background-color: lightgray;
     color: black;
+}
+
+@media screen and (max-width:768px) {
+    .main {
+        flex-direction: column;
+    }
+
+    .game img {
+        width: 95%;
+        display: block;
+    }
+
+    .timetable {
+        width: 100%;
+        overflow: hidden;
+        margin-top: 300px;
+    }
+
+    .container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+
+    }
 }

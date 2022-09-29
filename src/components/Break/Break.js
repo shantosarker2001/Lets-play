@@ -1,10 +1,10 @@
 import React from 'react';
 import './Break.css'
 const Break = (props) => {
-    console.log(props.cart)
+    const { setTime, time } = props
     return (
         <div >
-            <button className='btn' onClick={() => props.setTime(props.time)
+            <button className='btn' onClick={() => setTime(time)
             }> {props.time}</button >
         </div >
     );

@@ -1,6 +1,7 @@
 import React from 'react';
 import "./BreakTime.css"
-const BreakTime = () => {
+const BreakTime = (props) => {
+    console.log(props)
     return (
         <div>
             <div className='break'>
