@@ -15,6 +15,10 @@
 
 @media screen and (max-width:768px) {
     .question {
-        width: 94%;
+        width: 88%;
+    }
+
+    .question-container {
+        width: 90%;
     }
 }

@@ -44,7 +44,7 @@ const Main = () => {
             <div className="game-container">
                 <div>
                     {/* <img src=""></img> */}
-                    <h1> <FontAwesomeIcon icon={faFootball} />Lets-Play</h1>
+                    <h1 className='header'> <FontAwesomeIcon icon={faFootball} />Lets-Play</h1>
                     <h3>Select your game</h3>
                     <div className='container'>
                         {

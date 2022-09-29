@@ -22,6 +22,11 @@
     padding: 40px 20px;
 }
 
+.header {
+    color: orangered;
+
+}
+
 .btn-container {
     background-color: white;
     display: flex;
@@ -37,7 +42,7 @@
     }
 
     .timetable {
-        width: 100%;
+        width: 94%;
         overflow: hidden;
         margin-top: 300px;
     }
