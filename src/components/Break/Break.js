@@ -1,9 +1,11 @@
 import React from 'react';
+
 import './Break.css'
 const Break = (props) => {
-    const { setTime, time } = props
+    const { setTime, time, singleTime } = props
+
     return (
-        <div >
+        <div>
             <button className='btn' onClick={() => setTime(time)
             }> {props.time}</button >
         </div >

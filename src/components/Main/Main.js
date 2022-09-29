@@ -1,4 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFootball } from '@fortawesome/free-solid-svg-icons'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Break from '../Break/Break';
 import BreakTime from '../BreakTime/BreakTime';
 import Excersise from '../Excersise/Excersise';
@@ -20,30 +24,27 @@ const Main = () => {
         const newCart = [...cart, game]
         setCart(newCart)
     }
-
     const times = ['10s', '20s', '30s', '40s']
     const [singleTime, setSingleTime] = useState([])
-    let perTime;
     const setTime = (somoy) => {
         const newTime = [...singleTime, somoy]
         setSingleTime(newTime)
         // console.log("clicked", somoy)
         // console.log(newTime)
-
-        for (const time of newTime) {
-            perTime = time
-        }
-        console.log(perTime)
-
     }
     // console.log(singleTime)
     // const [timecart, setTimecart] = useState([])
+
+
+    const notify = () => toast.success("Game is Over");
+
     return (
+
         <div className='main'>
             <div className="game-container">
                 <div>
                     {/* <img src=""></img> */}
-                    <h1>Lets-Play:{games.length}</h1>
+                    <h1> <FontAwesomeIcon icon={faFootball} />Lets-Play</h1>
                     <h3>Select your game</h3>
                     <div className='container'>
                         {
@@ -64,6 +65,7 @@ const Main = () => {
                     {
                         times.map(time => <Break
                             time={time}
+                            singleTime={singleTime}
                             setTime={setTime}
                         ></Break>)
                     }
@@ -73,8 +75,12 @@ const Main = () => {
                 <h3>Excersise Details:</h3>
                 <Excersise cart={cart}></Excersise>
 
-                <BreakTime somoy={perTime}></BreakTime>
-                <button className='complete'>Excersise Done</button>
+                <BreakTime ></BreakTime>
+                <button className='complete' onClick={notify}>Excersise Done</button>
+                <ToastContainer
+                    position="top-right"
+
+                />
             </div>
         </div >
     );

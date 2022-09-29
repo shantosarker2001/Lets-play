@@ -9,7 +9,7 @@ const Game = (props) => {
             <img src={props.game.img} alt=""></img>
             <div className='info'>
                 <h1>{props.game.name}</h1>
-                <p>Time:{props.game.time}</p>
+                <p>Time:{props.game.time} min</p>
             </div>
             <button onClick={() => props.addToCartHandler(props.game)} className='btn-cart'>
                 <p>Add to Cart</p>

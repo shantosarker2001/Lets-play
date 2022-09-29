@@ -5,14 +5,14 @@ const Excersise = (props) => {
     let total = 0;
     for (const game of props.cart) {
         total = total + game.time
-        // console.log(game.time)
+
     }
     return (
         <div>
             <div className='time'>
 
                 <h4>Excersise Time:</h4>
-                <p>{total}seconds</p>
+                <p>{total} min</p>
             </div>
         </div>
     );

@@ -2,19 +2,19 @@
     background-color: gray;
     padding: 15px;
     border-radius: 20px;
-    margin: 80px 40px;
-    width: 100%;
+    margin: 7% 2%;
+    width: 94%;
 }
 
 .question {
     background-color: lightgray;
     padding: 15px;
     border-radius: 20px;
-    margin: 15px 20px;
+    margin: 2%;
 }
 
 @media screen and (max-width:768px) {
     .question {
-        width: 100%;
+        width: 94%;
     }
 }
