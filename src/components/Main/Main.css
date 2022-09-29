@@ -7,18 +7,27 @@
 .game-container {}
 
 .container {
-    width: 70%;
+    width: 60%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2%;
 }
 
 .timetable {
-    width: 20%;
+    width: 40%;
     background-color: gray;
     position: sticky;
     top: 0
 }
+
+.btn-container {
+    background-color: white;
+    display: flex;
+    padding: 10px 30px;
+    margin: 0px 10px;
+    border-radius: 8px;
+}
+
 
 @media screen and (max-width:768px) {
     .main {

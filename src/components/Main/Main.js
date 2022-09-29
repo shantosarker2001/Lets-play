@@ -20,7 +20,13 @@ const Main = () => {
         const newCart = [...cart, game]
         setCart(newCart)
     }
-    const setValue = () => {
+
+    const times = ['10s', '20s', '30s', '40s']
+    const [timecart, setTimecart] = useState([])
+    const setTime = (time) => {
+        const newtimeCart = [...timecart, time]
+        setTimecart(newtimeCart)
+        // console.log(newtimeCart)
     }
     return (
         <div className='main'>
@@ -38,14 +44,22 @@ const Main = () => {
                             ></Game>)
                         }
                     </div>
-
                 </div>
-
             </div>
             <div className="timetable">
                 <User></User>
                 <TimeTable></TimeTable>
-                <Break></Break>
+                <h4>Add a break</h4>
+                <div className='btn-container'>
+                    {
+                        times.map(time => <Break
+                            time={time}
+                            setTime={setTime}
+                        ></Break>)
+                    }
+                </div>
+
+                {/* <Break></Break> */}
                 <h3>Excersise Details:</h3>
                 <Excersise cart={cart}></Excersise>
                 <BreakTime></BreakTime>
